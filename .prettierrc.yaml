@@ -1,0 +1,10 @@
+quoteProps: "as-needed"
+semi: true
+tabWidth: 2
+useTabs: true
+trailingComma: "es5"
+importOrder: ["^@/app/(.*)$", "^[./]"]
+importOrderSeparation: true
+importOrderSortSpecifiers: true
+plugins: ["@trivago/prettier-plugin-sort-imports"]
+experimentalTernaries: true

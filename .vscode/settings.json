@@ -1,4 +1,14 @@
 {
 	"editor.insertSpaces": false,
-	"editor.tabSize": 3
+	"editor.tabSize": 3,
+	"[css]": {
+		"editor.tabSize": 3
+	},
+	"[markdown]": {
+		"editor.tabSize": 3,
+		"editor.insertSpaces": true
+	},
+	"[javascript]": {
+		"editor.tabSize": 3
+	}
 }

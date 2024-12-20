@@ -9,11 +9,15 @@
 		"astro": "astro"
 	},
 	"dependencies": {
-		"astro": "^5.0.9"
+		"@astrojs/rss": "^4.0.10",
+		"astro": "^5.0.9",
+		"marked": "^15.0.4",
+		"sanitize-html": "^2.14.0"
 	},
 	"devDependencies": {
 		"@eslint/js": "^9.17.0",
 		"@trivago/prettier-plugin-sort-imports": "^5.2.0",
+		"@types/sanitize-html": "^2.13.0",
 		"eslint": "^9.17.0",
 		"globals": "^15.14.0",
 		"typescript-eslint": "^8.18.1"

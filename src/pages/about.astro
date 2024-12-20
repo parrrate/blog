@@ -1,23 +1,10 @@
 ---
-
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pageTitle = "About This Blog";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>blog.parrrate</title>
-	</head>
-	<body>
-		<a href="/">Home</a>
-		<a href="/blog/">Blog</a>
-		<a href="/about/">About</a>
+<BaseLayout pageTitle={pageTitle}>
+	<h2><i>I'm stuff</i></h2>
 
-		<h1>About This Blog</h1>
-		<h2><i>I'm stuff</i></h2>
-
-		<p>This blog mostly describes work done by Alisa Feistel (or sometimes just things she finds interesting).</p>
-	</body>
-</html>
+	<p>This blog mostly describes work done by Alisa Feistel (or sometimes just things she finds interesting).</p>
+</BaseLayout>

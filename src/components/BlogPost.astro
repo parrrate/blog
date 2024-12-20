@@ -1,0 +1,8 @@
+---
+import { marked } from "marked";
+const { post } = Astro.props;
+const pageTitle = post.frontmatter.title;
+const content = marked.parseInline(pageTitle);
+---
+
+<li><a href={post.url} set:html={content}>{pageTitle}</a></li>

@@ -58,7 +58,8 @@ footer {
 	display: block;
 	text-align: center;
 	padding: 10px 0;
-	text-decoration: double 1px #d161a2 underline;
+	color: #d62e02;
+	text-decoration: double 1px #d62e02 underline;
 	font-size: 1.2rem;
 	font-weight: bold;
 	text-transform: uppercase;

@@ -1,8 +1,9 @@
 ---
 import { marked } from "marked";
+import BlogTime from "./BlogTime.astro";
 const { post } = Astro.props;
 const pageTitle = post.frontmatter.title;
 const content = marked.parseInline(pageTitle);
 ---
 
-<li><a href={post.url} set:html={content}>{pageTitle}</a></li>
+<li><a href={post.url} set:html={content}>{pageTitle}</a> <BlogTime date={post.frontmatter.pubDate} /></li>

@@ -1,0 +1,14 @@
+---
+import { DateTime } from "luxon";
+const { date } = Astro.props;
+const format = DateTime.fromISO(date).setZone("Europe/Moscow").toFormat("yyyy-LL-dd HH:mm");
+---
+
+<abbr title="Europe/Moscow">{format}</abbr>
+
+<style>
+	abbr {
+		cursor: default;
+		color: grey;
+	}
+</style>

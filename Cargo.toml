@@ -1,0 +1,13 @@
+[package]
+name = "blog"
+version = "0.0.0"
+edition = "2021"
+publish = false
+
+[dependencies]
+chrono = "0.4.39"
+clap = { version = "4.5.24", features = ["derive"] }
+handlebars = "6.3.0"
+miette = { version = "7.4.0", features = ["fancy"] }
+serde = { version = "1.0.217", features = ["derive"] }
+slug = "0.1.6"

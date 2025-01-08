@@ -32,8 +32,10 @@ const parsed = sanitizeHtml(await content, {
 	</head>
 	<body>
 		<Header />
-		<h1 set:html={content}>{pageTitle}</h1>
-		<slot />
+		<div>
+			<h1 set:html={content}>{pageTitle}</h1>
+			<slot />
+		</div>
 		<Footer />
 		<script>
 			import "../scripts/menu.js";

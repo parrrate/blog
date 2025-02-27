@@ -1,6 +1,6 @@
 quoteProps: "as-needed"
 semi: true
-tabWidth: 2
+tabWidth: 3
 useTabs: true
 trailingComma: "es5"
 importOrder: ["^@/app/(.*)$", "^[./]"]

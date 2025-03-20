@@ -7,3 +7,7 @@ indent_size = 3
 [*.md]
 indent_style = space
 indent_size = 3
+
+[.markdownlint.json]
+indent_style = tab
+indent_size = 3

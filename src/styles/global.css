@@ -26,6 +26,15 @@ a {
 }
 
 a code {
+	color: #dd3e9b;
+}
+
+code {
+	background-color: #080808;
+	color: #e496c3;
+}
+
+a code {
 	font-size: 1.1rem;
 }
 

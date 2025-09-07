@@ -3,7 +3,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 const allPosts = Object.values(import.meta.glob("../posts/*.md", { eager: true }));
 const tagSet = new Set(allPosts.map((post: any) => post.frontmatter.tags).flat());
 tagSet.delete("_");
-const uniqueTags = [...tagSet];
+const uniqueTags = [...tagSet].sort();
 const pageTitle = "Tags";
 ---
 

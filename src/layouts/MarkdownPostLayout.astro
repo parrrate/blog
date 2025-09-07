@@ -15,7 +15,7 @@ const format = DateTime.fromISO(frontmatter.pubDate).setZone("Europe/Moscow").to
 	{!!frontmatter.image && <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />}
 	<div class="tags">
 		{
-			frontmatter.tags.map((tag: string) => (
+			frontmatter.categories.map((tag: string) => (
 				<p class="tag">
 					<a href={`/tags/${tag}`}>{tag}</a>
 				</p>

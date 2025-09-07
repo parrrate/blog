@@ -9,7 +9,7 @@ const pageTitle = "Blog";
 	<ul>
 		{
 			allPosts
-				.filter((post: any) => !post.frontmatter.tags.includes("_draft"))
+				.filter((post: any) => !post.frontmatter.categories.includes("_draft"))
 				.map((post: any) => <BlogPost post={post} />)
 		}
 	</ul>

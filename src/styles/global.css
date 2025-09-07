@@ -33,6 +33,18 @@ em code {
 	font-size: 1.1rem;
 }
 
+h1 code {
+	font-size: 2.8rem;
+}
+
+h2 code {
+	font-size: 1.7rem;
+}
+
+h3 code {
+	font-size: 1.3rem;
+}
+
 * {
 	box-sizing: border-box;
 }

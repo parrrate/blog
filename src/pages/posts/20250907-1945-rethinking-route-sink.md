@@ -7,12 +7,21 @@ author: 'Alisa Feistel'
 # image:
 #    url: ''
 #    alt: ''
-categories: ["_draft", "async", "data-structures", "project:ruchei"]
+categories: ["_draft", "async", "data-structures", "project:ruchei", "series:streams-and-sinks"]
 ---
+
+> This is the first in the series of blog entries on `Stream`s and `Sink`s. In this one, I describe
+> what `ruchei` project is currently being up to without going into too much detail (wait for other
+> entries which will have that).
 
 ## The What
 
 [`ruchei_route::RouteSink`](<https://docs.rs/ruchei-route/0.1.7/ruchei_route/trait.RouteSink.html>)
+
+This basically just a [`Sink`](<https://docs.rs/futures-sink/0.3.31/futures_sink/trait.Sink.html>)
+but you need to specify a routing key in addition to the message. You wait until ready to receive
+a message with a certain key, send that message, then flush it (on that specific key), or close all
+routes at once.
 
 ## The Why
 
@@ -29,6 +38,8 @@ We want a universal interface for "collection of connections" and "ZeroMQ-style 
 ## But, yes, it's kind of an extension?
 
 There is a [blanket `impl`](<https://docs.rs/ruchei-route/0.1.7/ruchei_route/trait.RouteSink.html#impl-RouteSink%3CRoute,+Msg%3E-for-T>).
+With time, I've learned that this gets in the way more than provides any sort of convenience
+(especially for other blanket `impl`s).
 
 ## So, what changed?
 
@@ -72,15 +83,15 @@ Things you'd expect from an allocator, plus a bit more.
 ## Why is `Slab`
 
 Not only do you get a memory safe (compared to pointers) implementation for structures you make,
-but you also can expose `Slab`-like interface from the outside (you'll see that in `LinkedSlab`)
+but you also can expose `Slab`-like interface to the outside (you'll see that in `LinkedSlab`)
 either by giving your users `usize` directly or
 [some sort of a handle](<https://github.com/parrrate/ruchei/blob/d511929158d68b09a039c8ccbd58cddbc2de1de2/ruchei-collections/src/nodes.rs#L22-L26>).
 
 ## What is `LinkedSlab`
 
-`LinkedSlab<T, N>`, in addition to base `Slab<T>` interface gives you `N` doubly-linked lists. If
-you remove a node, it's automatically removed from all the doubly linked lists. This creates an
-insertion-sorted set overlay on the items of the slab.
+`LinkedSlab<T, N>`, in addition to base `Slab<T>` interface gives you `N` doubly-linked lists with
+nodes tied to items in the slab. If you remove an item, its node is automatically removed from all
+the lists. This creates an insertion-sorted subset overlay on the items of the slab.
 
 ## Why is `LinkedSlab`
 

@@ -7,7 +7,7 @@ author: 'Alisa Feistel'
 # image:
 #    url: ''
 #    alt: ''
-categories: ["_draft", "async", "data-structures", "project:ruchei", "series:streams-and-sinks"]
+categories: ["async", "data-structures", "project:ruchei", "series:streams-and-sinks"]
 ---
 
 > This is the first in the series of blog entries on `Stream`s and `Sink`s. In this one, I describe

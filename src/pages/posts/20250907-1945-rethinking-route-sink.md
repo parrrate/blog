@@ -33,7 +33,7 @@ We want a universal interface for "collection of connections" and "ZeroMQ-style 
 - Default behaviour for `RouteSink` on readying and flushing all routes is to hang forever, if
    implemented over a set of connections.
 - Implementing that behaviour otherwise is non-trivial.
-- It's sometimes nice to have a blanket impelmentation of this for all `Sink`s.
+- It's sometimes nice to have a blanket implementation of this for all `Sink`s.
 
 ## But, yes, it's kind of an extension?
 

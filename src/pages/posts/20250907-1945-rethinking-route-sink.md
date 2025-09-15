@@ -35,7 +35,7 @@ We want a universal interface for "collection of connections" and "ZeroMQ-style 
 - Implementing that behaviour otherwise is non-trivial.
 - It's sometimes nice to have a blanket implementation of this for all `Sink`s.
 
-## But, yes, it's kind of an extension?
+## But, yes, it *is* kind of an extension?
 
 There is a [blanket `impl`](<https://docs.rs/ruchei-route/0.1.7/ruchei_route/trait.RouteSink.html#impl-RouteSink%3CRoute,+Msg%3E-for-T>).
 With time, I've learned that this gets in the way more than provides any sort of convenience

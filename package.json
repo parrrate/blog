@@ -10,7 +10,7 @@
 	},
 	"dependencies": {
 		"@astrojs/rss": "^4.0.10",
-		"astro": "^5.0.9",
+		"astro": "^5.15.8",
 		"luxon": "^3.5.0",
 		"marked": "^15.0.4",
 		"sanitize-html": "^2.14.0"

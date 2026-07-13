@@ -17,7 +17,7 @@ console.log(allowedHosts);
 
 // https://astro.build/config
 export default defineConfig({
-	site: "https://blog.parrate.com",
+	site: "https://blog.parrrate.com",
 	server: {
 		allowedHosts,
 	},
